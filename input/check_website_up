@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+	$output = file_get_contents('http://bobbydilley.co.uk');
+	
+	$temp = -1;
+	preg_match("/PROJECT/", $output, $matches);
+	if($matches) {
+		die("OKAY - Curl of bobbydilley.co.uk was a success\n");
+	} else {
+		die("FAIL - Did not find the words PROJECT in the reply\n");
+	}
+
+	die("FAIL");
