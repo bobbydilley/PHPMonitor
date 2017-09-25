@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php
-	$output = exec('ssh pi@ssh.bobbydilley.co.uk "/opt/vc/bin/vcgencmd measure_temp"');
+	$output = exec('ssh user@example.com "/opt/vc/bin/vcgencmd measure_temp"');
 	
 	$temp = -1;
 	preg_match("/temp=(.*)'/", $output, $matches);
